@@ -4,7 +4,7 @@ RUN \
 apk add --no-cache git \
 && go get -v github.com/google/go-jsonnet/cmd/jsonnet
 
-FROM hashicorp/terraform:0.11.13
+FROM hashicorp/terraform:0.11.14
 
 COPY --from=jsonnet /go/bin/jsonnet /usr/local/bin/
 
